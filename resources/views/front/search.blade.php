@@ -3,7 +3,7 @@
 @section('content')
 
 @include('front.widgets.categoryWidget')
-@include('front.widgets.articleWidget')
+@include('front.widgets.articleSearchWidget')
 
                 
                 <!-- Side widgets-->

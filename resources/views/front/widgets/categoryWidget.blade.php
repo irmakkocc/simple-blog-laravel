@@ -2,7 +2,7 @@
 @isset($categories)
 <div class="col-md-3">
     <div class="card">
-        <div class="card-header">Kategoriler</div>
+        <div class="card-header"><b>Kategoriler</b></div>
         <div class="list-group">
             @foreach($categories as $category)
             

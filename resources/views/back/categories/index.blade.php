@@ -11,17 +11,17 @@
                             <div class="col-md-4">
                                 <div class="card shadow mb-4">
                                     <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">Yeni Kategori Oluştur</h6>
+                                        <h6 class="m-0 font-weight-bold">Yeni Kategori Oluştur</h6>
                                     </div>
                                 <div class="card-body">
                                     <form method="post" action="{{route('admin.category.create')}}">
                                         @csrf
-                                        <div class="form-group">
-                                            <label>Kategori Adı</label>
+                                        <div class="form-group mb-3">
+                                            <label class="mb-1"><b>Kategori Adı</b></label>
                                             <input type="text" class="form-control" name="category" required/>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Ekle </button>
+                                            <button type="submit" class="btn btn-success btn-block">Ekle </button>
                                         </div>
                                     </form>
                                 </div>
@@ -30,7 +30,7 @@
                             <div class="col-md-8">
                                 <div class="card shadow mb-4">
                                     <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">@yield('title')</h6>
+                                        <h6 class="m-0 font-weight-bold">@yield('title')</h6>
                                     </div>
                                 <div class="card-body">
                                 <div class="card-body">

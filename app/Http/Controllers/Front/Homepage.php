@@ -19,6 +19,7 @@ class Homepage extends Controller
         view()->share('categories', Category::where('status', 1)->orderBy('name', 'ASC')->get());
     }
     public function index(){
+        
         $data['articles']=Article::with('getCategory')->where('status', 1)->whereHas('getCategory',function($query){
             $query->where('status', 1);
         })->orderBy('created_at','DESC')->paginate(10);
@@ -43,5 +44,12 @@ class Homepage extends Controller
         $data['articles']=Article::where('status', 1)->where('category_id',$category->id)->orderBy('created_at','DESC')->paginate(1);
         $paginator = $data['articles'];
         return view('front.category', $data, compact('paginator'));
+    }
+
+    public function search(Request $request){
+        $query = $request->input('query');
+        $articles=Article::where('title', 'LIKE', "%{$query}%")->orWhere('content', 'LIKE', "%{$query}%")->where('status', 1)->orderBy('created_at', 'DESC')->paginate(10);
+
+        return view('front.search', compact('articles', 'query'));
     }
 }

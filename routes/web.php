@@ -48,7 +48,7 @@ Route::get('/{category}/{slug}',[Homepage::class, 'single'])->name('single');
 Route::get('/aktif-degil', function(){
     return view('front.active');
 });
-
+Route::get('/search', [Homepage::class, 'search'])->name('search');
 
 
 

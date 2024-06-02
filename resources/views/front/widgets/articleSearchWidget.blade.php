@@ -20,7 +20,5 @@
         <h3 class="card-title">Bu kategoriye ait bir yazı bulunamadı..</h3>
         <br/>
     @endif 
-    <!--Pagination-->
-    @include('front.widgets.paginationWidget')
                                     
 </div>

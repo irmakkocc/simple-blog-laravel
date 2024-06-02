@@ -16,6 +16,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
+        
         $article=Article::orderBy('created_at', 'ASC')->get();
         return view('back.articles.index', compact('article'));
     }

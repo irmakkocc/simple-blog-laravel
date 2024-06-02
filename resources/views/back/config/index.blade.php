@@ -9,25 +9,18 @@
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                                .
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-body">
                                 <form method="POST" action="{{route('admin.config.update')}}" enctype="multipart/form-data">
                                     @csrf
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <div class="form-group">
-                                            <label>Site Başlığı</label>
+                                            <label class="mb-1"><b>Site Başlığı</b></label>
                                             <input value="{{$config->title}}" type="text" name="title" required class="form-control"/>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <div class="form-group">
-                                            <label>Site Aktiflik Durumu</label>
+                                            <label class="mb-1"><b>Site Aktiflik Durumu</b></label>
                                             <select name="active" required class="form-control">
                                                 <option @if($config->active==1) selected @endif value="1">Açık</option>
                                                 <option @if($config->active==0) selected @endif value="0">Kapalı</option>
@@ -36,43 +29,43 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <div class="form-group">
-                                            <label>Site Logo</label>
+                                            <label class="mb-1"><b>Site Logo</b></label>
                                             <input type="file" name="logo" class="form-control"/>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <div class="form-group">
-                                            <label>Site Fav Icon</label>
+                                            <label class="mb-1"><b>Site Fav Icon</b></label>
                                             <input type="file" name="favicon" class="form-control"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <div class="form-group">
-                                            <label>Twitter</label>
+                                            <label class="mb-1"><b>Twitter</b></label>
                                             <input type="text" name="twitter" class="form-control" value="{{$config->twitter}}"/>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <div class="form-group">
-                                            <label>Instagram</label>
+                                            <label class="mb-1"><b>Instagram</b></label>
                                             <input type="text" name="instagram" class="form-control" value="{{$config->instagram}}"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <div class="form-group">
-                                            <label>GitHub</label>
+                                            <label class="mb-1"><b>GitHub</b></label>
                                             <input type="text" name="github" class="form-control" value="{{$config->github}}"/>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mb-3">
                                         <div class="form-group">
-                                            <label>Linkedln</label>
+                                            <label class="mb-1"><b>Linkedln</b></label>
                                             <input type="text" name="linkedln" class="form-control" value="{{$config->linkedln}}"/>
                                         </div>
                                     </div>

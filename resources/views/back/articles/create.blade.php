@@ -8,13 +8,6 @@
                         <ol class="breadcrumb mb-4">
                         </ol>
                         <div class="card mb-4">
-                            <div class="card-body">
-                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                                .
-                            </div>
-                        </div>
-                        <div class="card mb-4">
 
                             <div class="card-body">
                                 @if($errors->any())
@@ -26,12 +19,12 @@
                                 @endif
                                 <form method="post" action="{{route('admin.makaleler.store')}}" enctype="multipart/form-data">
                                     @csrf
-                                    <div class="form-group">
-                                        <label>Makale Başlığı</label>
+                                    <div class="form-group mb-3">
+                                        <label class="mb-1"><b>Makale Başlığı</b></label>
                                         <input type="text" name="title" class="form-control" required></input>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Makale Kategorisi</label>
+                                    <div class="form-group mb-3">
+                                        <label class="mb-1"><b>Makale Kategorisi</b></label>
                                         <select name="category" class="form-control" required>
                                             <option value="" required>Seçim Yapınız</option>
                                             @foreach($category as $categories)
@@ -39,16 +32,16 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Makale Fotoğrafı</label>
+                                    <div class="form-group mb-3">
+                                        <label class="mb-1"><b>Makale Fotoğrafı</b></label>
                                         <input type="file" name="image" class="form-control" required></input>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Makale İçeriği</label>
+                                    <div class="form-group mb-3">
+                                        <label class="mb-1"><b>Makale İçeriği</b></label>
                                         <textarea id="editor" name="content" class="form-control" rows="5"></textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block">Makaleyi Oluştur</button>
+                                    <div class="form-group mb-3">
+                                        <button type="submit" class="btn btn-success btn-block">Makaleyi Oluştur</button>
                                     </div>
                                 </form>
                             </div>                      
