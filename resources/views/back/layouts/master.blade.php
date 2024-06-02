@@ -1,0 +1,5 @@
+@include('back.layouts.header')
+@include('back.layouts.topnav')
+@include('back.layouts.sidenav')
+@yield('content')
+@include('back.layouts.footer')
